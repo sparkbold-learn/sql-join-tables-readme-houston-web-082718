@@ -42,7 +42,7 @@ id               name        age         owner_id    breed
 4                Lil' Bub    2                       perma-kitten 
 ```
 
-Note that both Maru and Hana have the same value in the `owner_id` column, a value of `1`. This corresponds to the owner from the Owners table who has an `id` of `1`. Both Maru and Hana, therefore, have the same owner. If we run a query to select all of the cats whose `owner_id` is `1`, we'll return both Maru and Hana. 
+Note that both Maru and Hana have the same value in the `owner_id` column, a value of `1`. This corresponds to the owner from the Owners table who has an `id` of `1`. Both Maru and Hana, therefore, have the same owner: mugumogu. If we run a query to select all of the cats whose `owner_id` is `1`, we'll return both Maru and Hana. 
 
 The following query:
 
