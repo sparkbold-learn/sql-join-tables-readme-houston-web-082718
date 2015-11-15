@@ -119,7 +119,7 @@ INSERT INTO owners (name) VALUES ("mugumogu");
 INSERT INTO owners (name) VALUES ("Sophie");
 INSERT INTO owners (name) VALUES ("Penny");
 INSERT INTO cats (name, age, breed) VALUES ("Maru", 3, "Scottish Fold");
-INSERT INTO cats (name, age, breed) VALUES ("Hana", 3, "Tabby", 1);
+INSERT INTO cats (name, age, breed) VALUES ("Hana", 3, "Tabby");
 INSERT INTO cats (name, age, breed) VALUES ("Nona", 4, "Tortoiseshell" );
 INSERT INTO cats (name, age, breed) VALUES ("Lil' Bub", 2, "perma-kitten");
 ```
@@ -161,7 +161,7 @@ Great! Now we're ready to start inserting some rows into our join table.
 
 #### Inserting Data into the Join Table
 
-Each row in our join table will represent one cat/owner relationship. Let's say, for example, that Nona the cat has acquired a second owner, Penny. Now we want to represent that Nona has two owners, Sophie and Penny. 
+Each row in our join table will represent one cat/owner relationship. Let's say, for example, that Nona the cat has acquired a second owner, Penny. Now we want to represent that Nona has two owners, Sophie and Penny.
 
 First, we'll insert the Nona/Sophie relationship into our join table. Recall that Nona the cat has an `id` of `3` and Sophie the owner has an `id` of `2`.
 
@@ -329,18 +329,4 @@ name
 Nona           
 Maru 
 ```
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
  
