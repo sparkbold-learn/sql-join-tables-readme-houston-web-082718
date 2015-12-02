@@ -330,3 +330,5 @@ Nona
 Maru 
 ```
  
+
+<a href='https://learn.co/lessons/sql-join-tables-readme' data-visibility='hidden'>View this lesson on Learn.co</a>
