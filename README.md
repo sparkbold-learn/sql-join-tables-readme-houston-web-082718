@@ -19,7 +19,7 @@ In relational databases, we can actually categorize the type of relationship tha
 
 Let's imagine a database that keeps track of pets and their owners. This Pet's Database has an Owners table and a Cats table. The Cats table has a column, `owner_id`, that contains a foreign key corresponding to the `id` column of the Owners table. 
 
-In this way, an individual cat is associated to the person that owns it. Any number of cats can have the same owner. In other words, any number of cats can have the name `owner_id`.
+In this way, an individual cat is associated to the person that owns it. Any number of cats can have the same owner. In other words, any number of cats can have the same `owner_id`.
 
 Let's say we have the following owners:
 
@@ -331,4 +331,6 @@ Maru
 ```
  
 
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/sql-join-tables-readme' title='Join Tables'>Join Tables</a> on Learn.co and start learning to code for free.</p>
+<a href='https://learn.co/lessons/sql-join-tables-readme' data-visibility='hidden'>View this lesson on Learn.co</a>
+
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/sql-join-tables-readme'>SQL Join Tables</a> on Learn.co and start learning to code for free.</p>
