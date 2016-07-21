@@ -230,7 +230,7 @@ cat_id           owner_id
 1                2    
 ```
 
-Nona, our cat with an `id` of `3` has may owners and Sophie, our owner with an `id` of `2`, has many cats. Our many-to-many relationship is up and running. 
+Nona, our cat with an `id` of `3` has many owners and Sophie, our owner with an `id` of `2`, has many cats. Our many-to-many relationship is up and running. 
 
 Now let's take advantage of this association by running some queries that utilize our join table to return information about these complex relationships. 
 
@@ -272,17 +272,17 @@ cat_id
 1   
 ``` 
 
-These queries are great, but it would be even better if we could write queries that would return us some further information about the cats and owners we are returning here, such as their names. Otherwise it becomes a little difficult to constantly remember cats and owners by ID only. We can do so by queries our join tables using JOIN statements. 
+These queries are great, but it would be even better if we could write queries that would return us some further information about the cats and owners we are returning here, such as their names. Otherwise it becomes a little difficult to constantly remember cats and owners by ID only. We can do so by querying our join tables using JOIN statements. 
 
 #### Advanced Queries 
 
-Execute the following query in your `sqlite3>` prompt in your terminal:
+Execute the following query in the `sqlite3>` prompt in your terminal:
 
 ```sql
-SELECT Owners.name 
-FROM Owners 
+SELECT owners.name 
+FROM owners 
 INNER JOIN cats_owners 
-ON Owners.id = cats_owners.owner_id WHERE cats_owners.cat_id = 3;
+ON owners.id = cats_owners.owner_id WHERE cats_owners.cat_id = 3;
 ```
 
 This should return:
@@ -296,12 +296,12 @@ Penny
 
 Let's break down the above query:
 
-* `SELECT Owners.name` - Here, we declare the column data that we want to actually have returned to us. 
-* `FROM Owners` - Here, we specify the table whose column we are querying. 
-* `INNER JOIN cats_owners ON Owners.id = cats_owners.owner_id` - Here, we are joining the `cats_owners` table on the `Owners` table. We are telling our query to look for owners whose `id` column matches up to the `owner_id` column in the `cats_owners` table. 
-* `WHERE cats_owners.cat_id = 3;` - Here, we are adding an additional condition to our query. We are telling our query to look at the `cats_owners` table rows where the value of the `cat_id` column is `3`. Then, *for those rows only*, cross reference the `owner_id` column value with the `id` column in the Owners table. 
+* `SELECT owners.name` - Here, we declare the column data that we want to actually have returned to us. 
+* `FROM owners` - Here, we specify the table whose column we are querying. 
+* `INNER JOIN cats_owners ON owners.id = cats_owners.owner_id` - Here, we are joining the `cats_owners` table on the `owners` table. We are telling our query to look for owners whose `id` column matches up to the `owner_id` column in the `cats_owners` table. 
+* `WHERE cats_owners.cat_id = 3;` - Here, we are adding an additional condition to our query. We are telling our query to look at the `cats_owners` table rows where the value of the `cat_id` column is `3`. Then, *for those rows only*, cross reference the `owner_id` column value with the `id` column in the `owners` table. 
 
-Let's take a look at a boiler-plate query that utilizing a JOIN statement to query a join table:
+Let's take a look at a boiler-plate query that utilizes a JOIN statement to query a join table:
 
 ```sql
 SELECT column(s)
@@ -314,10 +314,10 @@ WHERE table_two.column_name = condition;
 Giving this one more try, let's query the join table for the names of all of the cats owned by Sophie:
 
 ```sql
-SELECT Cats.name
-FROM Cats
+SELECT cats.name
+FROM cats
 INNER JOIN cats_owners
-ON Cats.id = cats_owners.cat_id
+ON cats.id = cats_owners.cat_id
 WHERE cats_owners.owner_id = 2;
 ```
 
@@ -329,6 +329,5 @@ name
 Nona           
 Maru 
 ```
- 
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/sql-join-tables-readme'>SQL Join Tables</a> on Learn.co and start learning to code for free.</p>
